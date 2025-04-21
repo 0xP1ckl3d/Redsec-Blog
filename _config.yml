@@ -54,7 +54,7 @@ theme_mode: dark
 
 cdn:
 
-avatar:
+avatar: /assets/logo.png
 
 social_preview_image:
 
