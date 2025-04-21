@@ -5,8 +5,6 @@ icon: fas fa-terminal
 order: 1
 ---
 
-# About
-
 Just a spot to post tools, payload delivery chains, infrastructure setups, evasion tricks, and anything else red team related that I find interesting or feel like revisiting later.
 
 Mostly offensive security, not overly polished, just stuff that works (or breaks in fun ways).
