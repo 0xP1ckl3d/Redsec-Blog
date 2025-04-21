@@ -3,6 +3,7 @@ layout: post
 title: "Modern Stage-One Payload Delivery Techniques on Windows (2025)"
 date: 2025-04-21 20:00:00 +1000
 tags: [phishing, payloads]
+categories: [Red Team Operations]
 ---
 
 # Modern Stage-One Payload Delivery Techniques on Windows (2025)
