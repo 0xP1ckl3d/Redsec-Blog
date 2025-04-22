@@ -5,9 +5,6 @@ date: 2025-04-21 20:00:00 +1000
 tags: [phishing, payloads]
 categories: [Red Team Operations]
 ---
-
-# Modern Stage-One Payload Delivery Techniques on Windows (2025)
-
 ## Introduction  
 In 2025, both red team operators and real‑world threat actors have evolved their techniques for delivering initial (“stage one”) malware payloads on Windows systems. Over the past few years, security improvements by vendors like Microsoft, Google, and Adobe have disrupted many classic attack vectors – for example, the enforcement of Mark‑of‑the‑Web (MOTW) in Microsoft Office now blocks VBA macros from Internet‑sourced documents by default. Likewise, browsers and email services aggressively filter dangerous file types, and operating systems impose new restrictions on running downloaded scripts. Despite these defences, attackers continue to find practical ways to **social‑engineer victims** into running malicious code with minimal friction. This report examines the modern payload‑delivery mechanisms that remain effective in 2025, why they work, and how they are leveraged differently by red teams and threat actors. We focus on Windows as the target environment and provide technical details and examples (e.g. recent malware campaigns and red‑team exercises) to illustrate each technique.
 
