@@ -51,6 +51,10 @@ pageviews:
 
 theme_mode: auto
 
+assets:
+  self_host:
+    enabled: true
+
 cdn:
 
 avatar: /assets/logo.png
