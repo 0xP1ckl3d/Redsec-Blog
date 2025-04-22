@@ -1,7 +1,5 @@
 # The Site Configuration
 
-theme: ./
-
 lang: en
 timezone: Australia/Sydney
 
@@ -74,6 +72,9 @@ pwa:
     deny_paths: []
 
 paginate: 10
+
+plugins:
+  - jekyll-include-cache
 
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
