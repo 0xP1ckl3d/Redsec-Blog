@@ -49,8 +49,7 @@ analytics:
 pageviews:
   provider:
 
-# Default to dark mode, toggle enabled
-theme_mode: dark
+theme_mode: auto
 
 cdn:
 
