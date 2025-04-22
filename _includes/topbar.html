@@ -1,6 +1,20 @@
 <!-- The Top Bar -->
 
 <header id="topbar-wrapper" class="flex-shrink-0" aria-label="Top Bar">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tocToggle = document.getElementById("toc-toggle");
+      const toc = document.querySelector(".toc-wrapper");
+  
+      if (tocToggle && toc) {
+        tocToggle.addEventListener("click", () => {
+          toc.classList.toggle("d-none");
+        });
+      }
+    });
+  </script>
+  
   <div
     id="topbar"
     class="d-flex align-items-center justify-content-between px-lg-3 h-100"
@@ -11,7 +25,6 @@
       {% if paths.size == 0 or page.layout == 'home' %}
         <!-- index page -->
         <span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>
-
       {% else %}
         {% for item in paths %}
           {% if forloop.first %}
@@ -20,14 +33,12 @@
                 {{- site.data.locales[include.lang].tabs.home | capitalize -}}
               </a>
             </span>
-
           {% elsif forloop.last %}
             {% if page.collection == 'tabs' %}
               <span>{{ site.data.locales[include.lang].tabs[item] | default: page.title }}</span>
             {% else %}
               <span>{{ page.title }}</span>
             {% endif %}
-
           {% elsif page.layout == 'category' or page.layout == 'tag' %}
             <span>
               <a href="{{ item | append: '/' | relative_url }}">
@@ -38,7 +49,6 @@
         {% endfor %}
       {% endif %}
     </nav>
-    <!-- endof #breadcrumb -->
 
     <button type="button" id="sidebar-trigger" class="btn btn-link" aria-label="Sidebar">
       <i class="fas fa-bars fa-fw"></i>
@@ -55,13 +65,22 @@
       {% endif %}
     </div>
 
-    <button type="button" id="search-trigger" class="btn btn-link" aria-label="Search">
-      <i class="fas fa-search fa-fw"></i>
-    </button>
+    <!-- Icon group: search, theme toggle, TOC toggle -->
+    <div class="d-flex align-items-center gap-2">
 
-    <div id="mode-toggle-wrapper" class="ms-2">
-      <button id="mode-toggle" class="btn btn-link" aria-label="Toggle dark/light mode">
+      <!-- Search icon -->
+      <button type="button" id="search-trigger" class="btn btn-link" aria-label="Search" title="Search">
+        <i class="fas fa-search fa-fw"></i>
+      </button>
+
+      <!-- Dark mode toggle -->
+      <button id="mode-toggle" class="btn btn-link" aria-label="Toggle dark mode" title="Toggle dark mode">
         <i class="fas fa-adjust fa-fw"></i>
+      </button>
+
+      <!-- TOC toggle (only visible on pages with TOC) -->
+      <button id="toc-toggle" class="btn btn-link" aria-label="Toggle sidebar" title="Toggle sidebar">
+        <i class="fas fa-list fa-fw"></i>
       </button>
     </div>
 
