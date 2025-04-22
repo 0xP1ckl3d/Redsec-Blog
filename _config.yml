@@ -48,7 +48,7 @@ analytics:
 pageviews:
   provider:
 
-theme_mode: auto
+theme_mode: dark
 
 assets:
   self_host:
