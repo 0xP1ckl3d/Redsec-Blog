@@ -54,6 +54,7 @@ theme_mode: auto
 assets:
   self_host:
     enabled: true
+    baseurl: /assets/lib
 
 cdn:
 
